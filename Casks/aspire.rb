@@ -2,10 +2,10 @@ cask "aspire" do
   arch arm: "arm64", intel: "x64"
 
   version "13.4.0"
-  sha256 arm:   "6aca9af53c351e1ae5aea8f66f57cb0be794dfe7d854088f91c4155d32c90225",
-         intel: "dae471370bf3915e8245e5e42cfd84da7aac1e1de797d9e0d4c0cb61170fbe6b"
+  sha256 arm:   "83e83b9a873d27a1764f53e9bc6dc216b259170ad2f95c5595820c2b6e08fccb",
+         intel: "97027882804c9f9bf7dede532e78f0b1dacaf83fe7c9835046f7ae33b44fe6ad"
 
-  url "https://ci.dot.net/public/aspire/13.4.0-preview.1.26279.5/aspire-cli-osx-#{arch}-#{version}.tar.gz",
+  url "https://ci.dot.net/public/aspire/13.4.0-preview.1.26279.18/aspire-cli-osx-#{arch}-#{version}.tar.gz",
       verified: "ci.dot.net/public/aspire/"
   name "Aspire CLI"
   desc "CLI for building observable, production-ready distributed applications"
