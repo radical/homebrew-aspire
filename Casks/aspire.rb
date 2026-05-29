@@ -1,11 +1,11 @@
 cask "aspire" do
   arch arm: "arm64", intel: "x64"
 
-  version "13.4.0-preview.1.26278.17"
+  version "13.4.0"
   sha256 arm:   "640efd6e1c58d93ff9786595233541febac0ba80a166c6d8928ec0fcf663f451",
          intel: "19cb6a3579162525f80b71f185eb9bea6c10515f9c020441b61c57ef90d18da5"
 
-  url "https://ci.dot.net/public/aspire/#{version}/aspire-cli-osx-#{arch}-13.4.0.tar.gz",
+  url "https://ci.dot.net/public/aspire/13.4.0-preview.1.26278.17/aspire-cli-osx-#{arch}-#{version}.tar.gz",
       verified: "ci.dot.net/public/aspire/"
   name "Aspire CLI"
   desc "CLI for building observable, production-ready distributed applications"
