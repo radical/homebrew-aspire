@@ -1,19 +1,22 @@
 cask "aspire" do
   arch arm: "arm64", intel: "x64"
 
-  version "13.3.5"
-  sha256 arm:   "7ae8181bec6dee12d1cfb039dd201d7cfb71b51c674b0f06a853f402742afbd3",
-         intel: "dafcf1633a6f2970c017d75287f502b0a033d65ff6acac02899f2761f8d16c62"
+  version "13.4.0-preview.1.26278.17"
+  sha256 arm:   "640efd6e1c58d93ff9786595233541febac0ba80a166c6d8928ec0fcf663f451",
+         intel: "19cb6a3579162525f80b71f185eb9bea6c10515f9c020441b61c57ef90d18da5"
 
-  url "https://github.com/microsoft/aspire/releases/download/v#{version}/aspire-cli-osx-#{arch}-#{version}.tar.gz",
-      verified: "github.com/microsoft/aspire/"
+  url "https://ci.dot.net/public/aspire/#{version}/aspire-cli-osx-#{arch}-13.4.0.tar.gz",
+      verified: "ci.dot.net/public/aspire/"
   name "Aspire CLI"
   desc "CLI for building observable, production-ready distributed applications"
   homepage "https://aspire.dev/"
 
+  # Skip livecheck on this staging dogfood tap; the daily staging channel does
+  # not have a stable version surface, and the upstream Homebrew/homebrew-cask
+  # submission will use the real livecheck block from
+  # eng/homebrew/aspire.rb.template.
   livecheck do
-    url :url
-    strategy :github_latest
+    skip "Aspire 13.4 staging dogfood; tracks the aka.ms/dotnet/9/aspire/rc/daily channel."
   end
 
   depends_on :macos
